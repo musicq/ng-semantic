@@ -1,7 +1,7 @@
 @import "../styles/variables";
 @import "./button-base";
 
-.#{$prefix}-btn {
+:host {
   background: $btn-bg-color;
   color: lighten($btn-text-color, 40%);
   border-radius: 4px;
@@ -10,9 +10,11 @@
   padding: $btn-padding;
   cursor: pointer;
   transition: background .2s;
+  user-select: none;
 
   @include interact($btn-bg-color);
 
+  // button styles
   &.primary {
     background: $btn-primary-bg-color;
     color: $btn-primary-text-color;
@@ -25,5 +27,11 @@
     color: $btn-secondary-text-color;
 
     @include interact($btn-secondary-bg-color, true);
+  }
+
+  &[disabled] {
+    opacity: .45;
+    cursor: default;
+    pointer-events: none;
   }
 }
