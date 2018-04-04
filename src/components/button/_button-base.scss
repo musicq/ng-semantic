@@ -1,3 +1,19 @@
+@import "../styles/variables";
+
+@mixin button-base {
+  box-sizing: border-box;
+  display: inline-block;
+  border-radius: 4px;
+  border: 0;
+  outline: 0;
+  padding: $btn-padding;
+  font-size: $base-font-size;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background .2s;
+  user-select: none;
+}
+
 @mixin interact($bg-color, $light: false) {
   &:hover, &:focus {
     @if $light {

@@ -1,16 +1,11 @@
 @import "../styles/variables";
 @import "./button-base";
 
-:host {
+.se-button {
+  @include button-base;
+
   background: $btn-bg-color;
   color: lighten($btn-text-color, 40%);
-  border-radius: 4px;
-  border: 0;
-  outline: 0;
-  padding: $btn-padding;
-  cursor: pointer;
-  transition: background .2s;
-  user-select: none;
 
   @include interact($btn-bg-color);
 
