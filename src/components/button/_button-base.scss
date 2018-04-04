@@ -1,0 +1,16 @@
+@mixin interact($bg-color, $light: false) {
+  &:hover, &:focus {
+    @if $light {
+      background: lighten($bg-color, 10%);
+    } @else {
+      background: darken($bg-color, 10%);
+    }
+  }
+  &:active {
+    @if $light {
+      background: lighten($bg-color, 20%);
+    } @else {
+      background: darken($bg-color, 20%);
+    }
+  }
+}

@@ -1,0 +1,29 @@
+@import "../styles/variables";
+@import "./button-base";
+
+.#{$prefix}-btn {
+  background: $btn-bg-color;
+  color: lighten($btn-text-color, 40%);
+  border-radius: 4px;
+  border: 0;
+  outline: 0;
+  padding: $btn-padding;
+  cursor: pointer;
+  transition: background .2s;
+
+  @include interact($btn-bg-color);
+
+  &.primary {
+    background: $btn-primary-bg-color;
+    color: $btn-primary-text-color;
+
+    @include interact($btn-primary-bg-color);
+  }
+
+  &.secondary {
+    background: $btn-secondary-bg-color;
+    color: $btn-secondary-text-color;
+
+    @include interact($btn-secondary-bg-color, true);
+  }
+}
