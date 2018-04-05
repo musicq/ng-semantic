@@ -1,25 +1,36 @@
 <h1>Button</h1>
 
 <div class="section">
-  <button se-button>Default Button</button>
-  <button se-button type="primary">Primary Button</button>
-  <button se-button type="secondary">Secondary Button</button>
+  <button sm-button>Default Button</button>
+  <button sm-button type="primary">Primary Button</button>
+  <button sm-button type="secondary">Secondary Button</button>
 </div>
 
 <div class="section">
-  <button se-button disabled>Disabled Default Button</button>
-  <button se-button type="primary" disabled>Disabled Primary Button</button>
-  <button se-button type="secondary" disabled>Disabled Secondary Button</button>
+  <button sm-button disabled>Disabled Default Button</button>
+  <button sm-button type="primary" disabled>Disabled Primary Button</button>
+  <button sm-button type="secondary" disabled>Disabled Secondary Button</button>
 </div>
 
 <div class="section">
-  <a se-button href="https://www.google.com">Disabled Default Button</a>
-  <a se-button type="primary">Disabled Primary Button</a>
-  <a se-button type="secondary">Disabled Secondary Button</a>
+  <a sm-button href="https://www.google.com">Disabled Default Button</a>
+  <a sm-button type="primary">Disabled Primary Button</a>
+  <a sm-button type="secondary">Disabled Secondary Button</a>
 </div>
 
 <div class="section">
-  <a se-button disabled>Disabled Default Button</a>
-  <a se-button type="primary" disabled>Disabled Primary Button</a>
-  <a se-button type="secondary" disabled>Disabled Secondary Button</a>
+  <a sm-button disabled>Disabled Default Button</a>
+  <a sm-button type="primary" disabled>Disabled Primary Button</a>
+  <a sm-button type="secondary" disabled>Disabled Secondary Button</a>
+</div>
+
+<div class="section">
+  <button sm-button [sm-button-toggle]="toggleStatus" (change)="onChange($event)">
+    {{ toggleStatus ? 'Activated' : 'Inactivated' }}
+  </button>
+  <button sm-button type="primary" [sm-button-toggle]="toggleStatus" (change)="onChange($event)">
+    {{ toggleStatus ? 'Activated' : 'Inactivated' }}
+  </button>
+  <button sm-button type="secondary" disabled [sm-button-toggle]="toggleStatus">Disabled Secondary Button Toggle
+  </button>
 </div>

@@ -22,6 +22,11 @@
       background: darken($bg-color, 10%);
     }
   }
+  @include active($bg-color, $light);
+}
+
+@mixin active($bg-color, $light: false) {
+  &.active,
   &:active {
     @if $light {
       background: lighten($bg-color, 20%);
