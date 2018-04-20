@@ -1,25 +1,30 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { CommonModule } from '@angular/common';
+import { async, TestBed } from '@angular/core/testing';
 
 import { ButtonComponent } from './button.component';
 
-describe('ButtonComponent', () => {
-  let component: ButtonComponent;
-  let fixture: ComponentFixture<ButtonComponent>;
+describe('SMButton', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ButtonComponent ]
+      imports: [CommonModule],
+      declarations: [ButtonComponent]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ButtonComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
   });
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
+  it('should apply class base on type attribute', () => {
+    const fixture = TestBed.createComponent(ButtonComponent);
+    const component = fixture.componentInstance;
+
+    component.type = 'primary';
+    fixture.detectChanges();
+    expect(fixture.debugElement.nativeElement.classList.contains('primary')).toBe(true);
+
+    component.type = 'secondary';
+    expect(fixture.debugElement.nativeElement.classList.contains('secondary')).toBe(true);
   });
 });

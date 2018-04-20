@@ -1,5 +1,19 @@
 @import "../styles/variables";
 
+// btn styles
+$btn-padding: 0.714rem 1.286rem;
+
+// color
+$btn-bg-color: #e0e1e2;
+$btn-text-color: #000;
+
+// bg-color & text color contrast
+$btn-primary-bg-color: $primary-color;
+$btn-primary-text-color: #fff;
+
+$btn-secondary-bg-color: $secondary-color;
+$btn-secondary-text-color: #fff;
+
 @mixin button-base {
   box-sizing: border-box;
   display: inline-block;

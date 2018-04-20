@@ -1,21 +1,6 @@
-$prefix: 'se';
-
+// base font size
 $base-font-size: 14px;
 
+// color pattern
 $primary-color: #2185d0;
 $secondary-color: #1b1c1d;
-
-/**
- * btn styles
- */
-$btn-padding: 0.714rem 1.286rem;
-
-$btn-bg-color: #e0e1e2;
-$btn-text-color: #000;
-
-// bg-color & text color contrast
-$btn-primary-bg-color: $primary-color;
-$btn-primary-text-color: #fff;
-
-$btn-secondary-bg-color: $secondary-color;
-$btn-secondary-text-color: #fff;

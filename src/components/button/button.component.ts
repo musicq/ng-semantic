@@ -25,6 +25,10 @@ export class ButtonComponent {
   private _type: COLOR_PATTERN;
 
   @Input()
+  get type(): COLOR_PATTERN {
+    return this._type;
+  }
+
   set type(value: COLOR_PATTERN) {
     value = value || '';
 
